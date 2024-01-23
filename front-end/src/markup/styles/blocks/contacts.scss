@@ -2,7 +2,7 @@
   @include contentPadding;
 
   &__title {
-    margin: 24px auto;
+    margin: 24px auto; // why margin auto?
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
@@ -25,6 +25,7 @@
   border-radius: 16px;
   border: 1px solid $card-contacts-page-border;
   background: $main-contacts-page-card-background-color;
+
   &--margin-inline {
     margin-inline: 14px;
   }
@@ -54,10 +55,10 @@
 
 
   &__location-text {
-      color: $primary-contacts-page-text-color;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: 400;
+    color: $primary-contacts-page-text-color;
+    width: 100%; // you don't need this
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   &__phone {
@@ -68,11 +69,11 @@
   }
 
   &__phone-text {
-      color: $primary-contacts-page-text-color;
-      font-size: 1rem;
-      font-weight: 400;
-      text-decoration: none;
-    }
+    color: $primary-contacts-page-text-color;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+  }
 
   &__text {
     margin-top: 24px;
@@ -93,6 +94,7 @@
     color: $contacts-page-message-us-color;
     font-size: 1.25rem;
     font-weight: 600;
+    
     @include contentPadding;
   }
 

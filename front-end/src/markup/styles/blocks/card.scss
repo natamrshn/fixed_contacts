@@ -1,14 +1,17 @@
 .card {
   padding: 16px;
   border-radius: 16px;
-  border: 1px solid var(--Accent-colour, #011b35);
-  background: var(--Fourth-accent-colour, #d8effb);
-  &--padding {
+  border: 1px solid var(--Accent-colour, #011b35); // magic color
+  background: var(--Fourth-accent-colour, #d8effb);// magic color
+
+  &--padding { //padding - inside, outside - margin
     margin: 0 14px;
   }
+
   &--margin-bottom {
     margin-bottom: 62px;
   }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -18,15 +21,16 @@
 
   &__location {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; // row - default variable, don't write this 
     gap: 32px;
-    &-text {
-      color: var(--Main-text, #02101f);
-      width: 100%;
-      font-size: 16px;
-      font-style: normal;
+
+    &-text { //you don't need this
+      color: var(--Main-text, #02101f);// magic color
+      width: 100%; // you don't need this
+      font-size: 16px;//rem
+      font-style: normal; // delete
       font-weight: 400;
-      line-height: normal;
+      line-height: normal; // delete
     }
   }
 
@@ -38,9 +42,9 @@
     justify-content: space-around;
     padding: 8px;
     
-    &-text {
-      color: var(--Main-text, #02101f);
-      font-size: 16px;
+    &-text { // you don't need this
+      color: var(--Main-text, #02101f);// magic color
+      font-size: 16px; //rem
       font-weight: 400;
       text-decoration: none;
     }
@@ -49,25 +53,29 @@
   &__text {
     margin-top: 24px;
     margin-bottom: 16px;
-    color: var(--Main-text, #02101f);
+    color: var(--Main-text, #02101f);// magic color
     text-align: center;
-    font-size: 16px;
+    font-size: 16px;//rem
     font-weight: 700;
   }
+
   &__photo {
     border-radius: 8px;
-    border: 1px solid #011b35;
+    border: 1px solid #011b35;// magic color
   }
+
   &__message-us {
     margin-top: 32px;
-    color: var(--Titles, #0c0202);
-    font-size: 20px;
+    color: var(--Titles, #0c0202);// magic color
+    font-size: 20px;//rem
     font-weight: 600;
+
     @include contentPadding;
   }
+
   &__social {
-    margin-top: 24px;
-    margin-bottom: 48px;
+    margin-top: 24px; // make in one margin
+    margin-bottom: 48px; // make in one margin
     display: flex;
     gap: 24px;
     justify-content: center;
