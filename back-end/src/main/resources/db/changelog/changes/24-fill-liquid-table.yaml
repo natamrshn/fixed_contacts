@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-liquids-table
+      author: optic-okulist
+      changes:
+        - insert:
+            tableName: liquids
+            columns:
+              - column: { name: "id", value: 4 }
+              - column: { name: "volume", value: 100 }

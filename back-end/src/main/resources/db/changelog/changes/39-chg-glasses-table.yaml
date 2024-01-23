@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: chg-glasses-table
+      author: hlib13
+      changes:
+        - addColumn:
+            tableName: glasses
+            columns:
+              - column:
+                  name: "cover_image"
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                  defaultValue: false
+
+

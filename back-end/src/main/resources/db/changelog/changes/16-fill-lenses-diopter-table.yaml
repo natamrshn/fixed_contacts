@@ -1,0 +1,94 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-diopter
+      author: Ros
+      changes:
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-15.00" }
+              - column: { name: "max_diopter", value: "+8.00" }
+              - column: { name: "step", value: "null" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-0.50" }
+              - column: { name: "max_diopter", value: "-6.00" }
+              - column: { name: "step", value: "0.25" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-6.00" }
+              - column: { name: "max_diopter", value: "-15.00" }
+              - column: { name: "step", value: "0.5" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "+1.00" }
+              - column: { name: "max_diopter", value: "+8.00" }
+              - column: { name: "step", value: "0.5" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-12.00" }
+              - column: { name: "max_diopter", value: "+8.00" }
+              - column: { name: "step", value: "null" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-0.50" }
+              - column: { name: "max_diopter", value: "-6.00" }
+              - column: { name: "step", value: "0.25" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-6.50" }
+              - column: { name: "max_diopter", value: "-12.00" }
+              - column: { name: "step", value: "0.5" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "+0.50" }
+              - column: { name: "max_diopter", value: "+6.00" }
+              - column: { name: "step", value: "0.25" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "+6.50" }
+              - column: { name: "max_diopter", value: "+8.00" }
+              - column: { name: "step", value: "0.5" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-12.00" }
+              - column: { name: "max_diopter", value: "+6.00" }
+              - column: { name: "step", value: "null" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-0.50" }
+              - column: { name: "max_diopter", value: "-6.00" }
+              - column: { name: "step", value: "0.25" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "-6.00" }
+              - column: { name: "max_diopter", value: "-12.00" }
+              - column: { name: "step", value: "0.5" }
+
+        - insert:
+            tableName: "lenses_diopter"
+            columns:
+              - column: { name: "min_diopter", value: "+1.00" }
+              - column: { name: "max_diopter", value: "+6.00" }

@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-lenses-color-table
+      author: optic-okulist
+      changes:
+        - createTable:
+            tableName: "lenses_color"
+            columns:
+              - column:
+                  name: "id"
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "color"
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

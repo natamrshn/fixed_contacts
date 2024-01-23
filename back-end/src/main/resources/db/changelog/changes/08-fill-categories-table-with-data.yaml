@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-categories-table-with-data
+      author: optic-okulist
+      changes:
+        - insert:
+            tableName: categories
+            columns:
+              - column: {name: "name", value: "Glasses"}
+        - insert:
+            tableName: categories
+            columns:
+              - column: { name: "name", value: "Contact Lenses" }
+        - insert:
+            tableName: categories
+            columns:
+              - column: { name: "name", value: "Liquids" }

@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-temporary_users_products-table
+      author: olekskov
+      changes:
+        - createTable:
+            tableName: "temporary_users_products"
+            columns:
+              - column:
+                  name: "temporary_user_id"
+                  type: "bigint"
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "product_id"
+                  type: "bigint"
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: "temporary_users_products"
+            baseColumnNames: "temporary_user_id"
+            constraintName: "FK_temporary_users_products_temporary_users"
+            referencedTableName: "temporary_users"
+            referencedColumnNames: "id"
+        - addForeignKeyConstraint:
+            baseTableName: "temporary_users_products"
+            baseColumnNames: "product_id"
+            constraintName: "FK_temporary_users_products_products"
+            referencedTableName: "products"
+            referencedColumnNames: "id"

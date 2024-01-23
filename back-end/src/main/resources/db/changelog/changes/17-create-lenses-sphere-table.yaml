@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-lenses-sphere-table
+      author: Ros
+      changes:
+        - createTable:
+            tableName: "lenses_sphere"
+            columns:
+              - column:
+                  name: "id"
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "base_curve"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true

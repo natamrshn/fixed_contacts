@@ -1,0 +1,77 @@
+databaseChangeLog:
+  - changeSet:
+      id: redesign-manufacturers-table-and-connections
+      author: olekskov
+      changes:
+        - createTable:
+            tableName: manufacturers_colors
+            columns:
+              - column:
+                  name: manufacturer_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: color_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: manufacturers_spheres
+            columns:
+              - column:
+                  name: manufacturer_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: sphere_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - sql:
+            sql: "ALTER TABLE lenses_diopter ALTER COLUMN step SET DEFAULT 1"
+        - addPrimaryKey:
+            columnNames: manufacturer_id, color_id
+            constraintName: pk_manufacturers_colors
+            tableName: manufacturers_colors
+        - addPrimaryKey:
+            columnNames: manufacturer_id, sphere_id
+            constraintName: pk_manufacturers_spheres
+            tableName: manufacturers_spheres
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers_colors
+            baseColumnNames: manufacturer_id
+            constraintName: fk_manufacturers_colors_manufacturer
+            referencedColumnNames: id
+            referencedTableName: manufacturers
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers_colors
+            baseColumnNames: color_id
+            constraintName: fk_manufacturers_colors_color
+            referencedColumnNames: id
+            referencedTableName: lenses_color
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers_spheres
+            baseColumnNames: manufacturer_id
+            constraintName: fk_manufacturers_spheres_manufacturer
+            referencedColumnNames: id
+            referencedTableName: manufacturers
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers_spheres
+            baseColumnNames: sphere_id
+            constraintName: fk_manufacturers_spheres_sphere
+            referencedColumnNames: id
+            referencedTableName: lenses_sphere
+        - dropForeignKeyConstraint:
+            baseTableName: manufacturers
+            constraintName: fk_manufacturer_color
+        - dropForeignKeyConstraint:
+            baseTableName: manufacturers
+            constraintName: fk_manufacturer_sphere
+        - dropColumn:
+            tableName: manufacturers
+            columnName: color_id
+        - dropColumn:
+            tableName: manufacturers
+            columnName: sphere_id

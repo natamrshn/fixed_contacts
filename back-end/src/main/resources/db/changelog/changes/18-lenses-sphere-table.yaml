@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-sphere-table
+      author: Ros
+      changes:
+        - insert:
+            tableName: "lenses_sphere"
+            columns:
+              - column: { name: "base_curve", value: "+6.00" }
+
+        - insert:
+            tableName: "lenses_sphere"
+            columns:
+              - column: { name: "base_curve", value: "-10.00" }

@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-products-categories-table
+      author: Ros
+      changes:
+        - insert:
+            tableName: products_categories
+            columns:
+              - column: { name: "product_id", value: 1 }  # Adjust as needed
+              - column: { name: "category_id", value: 1 }  # Adjust as needed
+
+        - insert:
+            tableName: products_categories
+            columns:
+              - column: { name: "product_id", value: 2 }  # Adjust as needed
+              - column: { name: "category_id", value: 1}  # Adjust as needed
+
+        - insert:
+            tableName: products_categories
+            columns:
+              - column: { name: "product_id", value: 3 }
+              - column: { name: "category_id", value: 1 }
+        - insert:
+            tableName: products_categories
+            columns:
+              - column: { name: "product_id", value: 4 }
+              - column: { name: "category_id", value: 3 }

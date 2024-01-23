@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-address-table
+      author: ros
+      changes:
+        - insert:
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: address_line1
+                  value: '123 Main St'
+              - column:
+                  name: address_line2
+                  value: 'Apt 45'
+              - column:
+                  name: city
+                  value: 'Your City'
+              - column:
+                  name: postal_code
+                  value: '12345'
+              - column:
+                  name: is_available_for_pickup
+                  value: 0
+
+        - insert:
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: address_line1
+                  value: '456 Oak St'
+              - column:
+                  name: address_line2
+                  value: 'Suite 78'
+              - column:
+                  name: city
+                  value: 'Another City'
+              - column:
+                  name: postal_code
+                  value: '67890'
+              - column:
+                  name: is_available_for_pickup
+                  value: 0
+

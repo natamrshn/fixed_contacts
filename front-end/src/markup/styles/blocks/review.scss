@@ -1,0 +1,22 @@
+.review {
+  width: 275px;
+  flex-direction: column;
+
+  &--margin-bottom {
+    margin-bottom: 48px;
+  }
+
+  &__border-text {
+    padding: 12px 16px 16px;
+    margin-bottom: 8px;
+
+    border-radius: 16px;
+    border: 1px solid $review-border-color;
+  }
+
+  &__text {
+    color: $review-text-color;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+}

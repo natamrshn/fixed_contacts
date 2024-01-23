@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-lense-config-columns-to-cart-items
+      author: olekskov
+      changes:
+        - addColumn:
+            tableName: cart_items
+            columns:
+              - column:
+                  name: color
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: cylinder
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: degree
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: diopter
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: sphere
+                  type: varchar(255)
+                  constraints:
+                    nullable: true

@@ -1,0 +1,21 @@
+@mixin onPhone($height, $width) {
+  @media (max-width: 320px) {
+    height: $height;
+    width: $width;
+  }
+}
+
+@mixin contentPadding {
+  @media (max-width: 320px) {
+    padding-inline: 30px;
+  }
+}
+
+@mixin transitionAnimation {
+  transition: all $transition-time;
+  transform: translateX(-100%);
+
+  &:target {
+    transform: translateX(0);
+  }
+}

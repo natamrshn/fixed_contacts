@@ -1,0 +1,22 @@
+.animation {
+  white-space: nowrap;
+  display: flex;
+  color: #fff;
+  text-shadow: 
+    -1px -1px 0 $animation-text-color,  
+    1px -1px 0 $animation-text-color,
+    -1px 1px 0 $animation-text-color,
+    1px 1px 0 $animation-text-color;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow: hidden;
+
+  &__block {
+    animation: running-text 7s linear infinite;
+  }
+
+  &__text {
+    margin: 0 20px;
+  }
+}

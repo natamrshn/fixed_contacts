@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+  }
+
+  &__body {
+    margin: 0;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    @include transitionAnimation;
+    @include onPhone(568px, 320px);
+
+    &:target {
+      position: fixed;
+      overflow-y: hidden;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &__image {
+      position: absolute;
+      width: 320px;
+      height: 568px;
+      z-index: -1;
+      object-fit: cover;
+      filter: blur(9px);
+    }
+  }
+}

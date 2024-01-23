@@ -1,0 +1,117 @@
+.main {
+  &--about-us-page {
+    background-color: $main-about-us-background-color;
+
+    @include contentPadding;
+  }
+
+  &--service-page {
+    background-color: $main-useful-page-background-color;
+
+    @include contentPadding;
+  }
+
+  &--useful-page {
+    background-color: $main-useful-page-background-color;
+
+    @include contentPadding;
+  }
+
+  &--contacts-page {
+     background-color: $main-contacts-page-background-color;
+  }
+
+  &--reviews-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $body-reviews-page-background-color;
+
+    @include contentPadding;
+
+    &__feedback {
+      position: relative;
+      margin: 32px 0 0;
+      color: $feedback-text-color;
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    &__feedback-text {
+      margin-bottom: 7px;
+    }
+
+    &__icon {
+      position: absolute;
+      top: 31px;
+      left: 16px;
+    }
+  }
+
+  &__bottom {
+    height: 965px;
+    padding: 18px 0;
+    background-color: $main-background-color;
+  }
+
+  &__image {
+    &--about-us-page {
+      margin-bottom: 16px;
+      width: 260px;
+      height: 128px;
+      border-radius: 8px;
+      box-shadow: $block-shadow;
+      &--second-image {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__text {
+    &--about-us-page {
+      margin-bottom: 48px;
+    }
+
+    &--useful-page {
+      margin-bottom: 8px;
+      color: $main-useful-page-text-color;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+
+      &--not-centered {
+        margin-bottom: 8px;
+      }
+
+      &--last-title {
+        margin: 24px 0 48px;
+        color: $main-useful-page-text-color;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      &--second-text {
+        margin-bottom: 16px;
+        color: $main-useful-page-text-color;
+        font-size: 0.875rem;
+        font-weight: 300;
+
+        &--no-margin {
+          color: $main-useful-page-text-color;
+          font-size: 0.875rem;
+          font-weight: 300;
+        }
+      }
+
+      &--title {
+        margin-bottom: 8px;
+        color: $main-useful-page-title-color;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

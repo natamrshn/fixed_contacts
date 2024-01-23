@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include contentPadding;
+
+  &__image {
+    width: 260px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: $content-box-shadow;
+
+    &--second {
+      margin-top: 8px;
+      height: 340px;
+      border-radius: 8px;
+      box-shadow: $content-box-shadow;
+    }
+  }
+
+  &__title {
+    margin: 16px 0 8px;
+
+    color: $content-title-color;
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+
+  &__text {
+    margin: 0 0 24px;
+
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-color-table-with-data
+      author: optic-okulist
+      changes:
+        - insert:
+            tableName: "lenses_color"
+            columns:
+              - column: { name: "color", value: "Blue" }
+        - insert:
+            tableName: "lenses_color"
+            columns:
+              - column: { name: "color", value: "Green" }
+        - insert:
+            tableName: "lenses_color"
+            columns:
+              - column: { name: "color", value: "Brown" }

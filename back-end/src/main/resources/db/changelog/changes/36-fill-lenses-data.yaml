@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-data
+      author: olekskov
+      changes:
+        - sql:
+            sql: "UPDATE lenses_diopter SET step = COALESCE(step, 1)"
+        - insert:
+            tableName: manufacturers
+            columns:
+              - column: { name: "name", value: "Pfizer" }
+              - column: { name: "cylinder_id", value: 1 }
+              - column: { name: "degree_id", value: 1 }
+              - column: { name: "diopter_id", value: 1 }
+        - insert:
+            tableName: manufacturers_colors
+            columns:
+              - column: { name: "manufacturer_id", value: 1 }
+              - column: { name: "color_id", value: 1 }
+        - insert:
+            tableName: manufacturers_colors
+            columns:
+              - column: { name: "manufacturer_id", value: 1 }
+              - column: { name: "color_id", value: 2 }
+        - insert:
+            tableName: manufacturers_colors
+            columns:
+              - column: { name: "manufacturer_id", value: 1 }
+              - column: { name: "color_id", value: 3 }
+        - insert:
+            tableName: manufacturers_spheres
+            columns:
+              - column: { name: "manufacturer_id", value: 1 }
+              - column: { name: "sphere_id", value: 1 }
+        - insert:
+            tableName: manufacturers_spheres
+            columns:
+              - column: { name: "manufacturer_id", value: 1 }
+              - column: { name: "sphere_id", value: 2 }
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: "name", value: "Sample Lenses" }
+              - column: { name: "price", value: 99 }
+              - column: { name: "identifier", value: "LNST01" }
+              - column: { name: "description", value: "Lenses example" }
+              - column: { name: "image_url", value: "example_image_url_1.jpg" }
+              - column: { name: "image_url_second", value: "example_image_url_2.jpg" }
+        - insert:
+            tableName: products_categories
+            columns:
+              - column: { name: "product_id", value: 5 }
+              - column: { name: "category_id", value: 2 }
+        - insert:
+            tableName: contact_lenses
+            columns:
+              - column: { name: "id", value: 5 }
+              - column: { name: "manufacturers_id", value: 1 }

@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-roles-table-by-data
+      author: optic-okulist
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: MAIN_ADMIN
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: ADMIN
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: USER

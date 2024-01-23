@@ -1,0 +1,111 @@
+.header {
+  position: relative;
+  align-items: center;
+
+  &--service-page {
+    @include onPhone(175px, 320px);
+  }
+
+  &--main-page {
+    @include onPhone(568px, 320px);
+  }
+
+  &--about-us-page {
+    background-color: $header-about-us-background-color;
+  }
+
+  &--useful-page {
+    background-color: $header-useful-page-background-color;
+  }
+
+  &--reviews-page {
+    background-color: $header-reviews-page-background-color;
+  }
+  &--contacts-page {
+    background-color: $header-contacts-page-background-color;
+  }
+
+  &__background-image {
+    position: absolute;
+    width: 320px;
+    height: 568px;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(9px);
+  }
+
+  &__logo-image {
+    width: 125px;
+    height: 40px;
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__title-wrapper {
+    text-align: center;
+
+    &--main-page {
+      margin: 52px 0 48px;
+    }
+
+    &--about-us-page {
+      margin: 24px 0;
+    }
+
+    &--useful-page {
+      margin: 24px 0;
+    }
+
+    &--reviews-page {
+      margin: 24px 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content-title {
+    margin: 0;
+
+    color: $header-title-color;
+    font-size: 3.125rem;
+    font-weight: 700;
+  }
+
+  &__content-text {
+    margin: 4px 0 0;
+
+    color: $header-under-title-color;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+
+  &__content-bottom-text {
+    display: block;
+
+    &--main-page {
+      margin-bottom: 52px;
+      width: 260px;
+      height: 79px;
+
+      text-align: center;
+      color: $header-text-color;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &--about-us-page {
+      margin-bottom: 32px;
+      color: $header-about-us-content-text-color;
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    @include contentPadding;
+  }
+}

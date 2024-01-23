@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-degree-table
+      author: Ros
+      changes:
+        - insert:
+            tableName: "lenses_degree"
+            columns:
+              - column: { name: "min_degree", value: "10" }
+              - column: { name: "max_degree", value: "180" }
+              - column: { name: "degree_step", value: "10" }

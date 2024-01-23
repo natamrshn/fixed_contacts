@@ -1,0 +1,100 @@
+.button {
+  display: flex;
+  width: 260px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $button-background-color;
+  border-radius: 100px;
+
+  line-height: 48px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+
+  transition: background-color .3s;
+
+  &--product {
+    gap: 10px;
+    width: 190px;
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--aside {
+    display: flex;
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid $aside-button-border-color;
+    border-radius: 100px;
+
+    color: $aside-text-color;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &--redirect {
+    background-color: #fff;
+    color: $content-text-color;
+    border: 1px solid $content-text-color;
+
+    &--wrapper {
+      @include contentPadding;
+      margin-bottom: 52px;
+    }
+
+    &__icon {
+      margin-left: 8px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--answer {
+    width: 190px;
+    height: 40px;
+    margin-top: 24px;
+    background-color: $button-answer-background-color;
+    color: $button-answer-text-color;
+    border-radius: 100px;
+    border: 1px solid $button-answer-border-color;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  &--feedback {
+    margin-bottom: 16px;
+    border-radius: 16px;
+    background-color: $feedback-button-background-color;
+    border: 1px solid $feedback-button-border-color;
+  }
+
+  &--feedback-send {
+    margin-bottom: 48px;
+    width: 190px;
+  }
+
+  &--call-margin {
+    margin-top: 16px;
+  }
+
+  &--show-on-map {
+    background: transparent;
+    border-radius: 100px;
+    border: 1px solid var(--Accent-colour, #011B35);
+    margin-top: 16px;
+    color: var(--Main-text, #02101F);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

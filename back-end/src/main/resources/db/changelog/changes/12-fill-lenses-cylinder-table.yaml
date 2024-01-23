@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-lenses-cylinder-table
+      author: optic-okulist
+      changes:
+        - insert:
+            tableName: "lenses_cylinder"
+            columns:
+              - column: { name: "min_cylinder", value: "0.75" }
+              - column: { name: "max_cylinder", value: "1.75" }
+              - column: { name: "cylinder_step", value: "0.5" }

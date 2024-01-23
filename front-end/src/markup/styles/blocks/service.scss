@@ -1,0 +1,32 @@
+.service {
+  width: 260px;
+  padding: 16px;
+
+  border: 1px solid $service-border-color;
+  border-radius: 24px;
+
+  &--margin-bottom {
+    margin-bottom: 32px;
+  }
+
+  &--last-card {
+    margin-bottom: 48px;
+  }
+
+  &__image {
+    width: 230px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: $product-box-shadow;
+  }
+
+  &__text {
+    margin-top: 8px;
+    color: $service-text-color;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

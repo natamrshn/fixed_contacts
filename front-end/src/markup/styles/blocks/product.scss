@@ -1,0 +1,45 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  color: $content-text-color;
+  font-size: 1rem;
+
+  @include contentPadding;
+
+  &--margin {
+    margin: 24px 0 32px;
+  }
+
+  &__image {
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: $product-box-shadow;
+  }
+
+  &__descripsion {
+    margin: 8px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &__name {
+    margin: 0;
+    color: $content-text-color;
+    font-weight: 500;
+  }
+
+  &__price {
+    margin: 16px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

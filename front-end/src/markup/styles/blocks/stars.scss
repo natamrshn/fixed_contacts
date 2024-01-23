@@ -1,0 +1,17 @@
+.stars {
+  display: flex;
+
+  &__star-active {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    background: url(../icons/reviews/star-active.svg) 50% no-repeat;
+  }
+
+  &__star-unactive {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+    background: url(../icons/reviews/star-unactive.svg) 50% no-repeat;
+  }
+}

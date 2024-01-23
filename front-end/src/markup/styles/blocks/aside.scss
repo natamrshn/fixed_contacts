@@ -1,0 +1,62 @@
+.aside {
+  z-index: 9999;
+  &__background-image {
+    position: absolute;
+    width: 320px;
+    height: 568px;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(9px);
+  }
+
+  &__nav {
+    @include onPhone(90px, 320px);
+    @include contentPadding;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo-image {
+    width: 125px;
+    height: 40px;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include contentPadding;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $aside-text-color;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--margin-bottom {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 20px;
+
+    @include contentPadding;
+  }
+}

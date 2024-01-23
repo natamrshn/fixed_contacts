@@ -1,0 +1,81 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-manufacturers-table
+      author: olekskov
+      changes:
+        - createTable:
+            tableName: manufacturers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: color_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: cylinder_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: degree_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: diopter_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: sphere_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers
+            baseColumnNames: color_id
+            referencedTableName: "lenses_color"
+            referencedColumnNames: id
+            constraintName: fk_manufacturer_color
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers
+            baseColumnNames: cylinder_id
+            referencedTableName: "lenses_cylinder"
+            referencedColumnNames: id
+            constraintName: fk_manufacturer_cylinder
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers
+            baseColumnNames: degree_id
+            referencedTableName: "lenses_degree"
+            referencedColumnNames: id
+            constraintName: fk_manufacturer_degree
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers
+            baseColumnNames: diopter_id
+            referencedTableName: "lenses_diopter"
+            referencedColumnNames: id
+            constraintName: fk_manufacturer_diopter
+        - addForeignKeyConstraint:
+            baseTableName: manufacturers
+            baseColumnNames: sphere_id
+            referencedTableName: "lenses_sphere"
+            referencedColumnNames: id
+            constraintName: fk_manufacturer_sphere

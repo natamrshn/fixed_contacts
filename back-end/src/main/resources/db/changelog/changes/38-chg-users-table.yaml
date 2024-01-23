@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - changeSet:
+      id: chg-users-table
+      author: olekskov
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: dtype
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: session_id
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+        - update:
+            tableName: users
+            columns:
+              - column:
+                  name: dtype
+                  value: "registered"
+        - dropNotNullConstraint:
+            tableName: users
+            columnName: email
+            columnDataType: varchar(255)
+        - dropNotNullConstraint:
+            tableName: users
+            columnName: password
+            columnDataType: varchar(255)
+        - dropNotNullConstraint:
+            tableName: users
+            columnName: first_name
+            columnDataType: varchar(255)
+        - dropNotNullConstraint:
+            tableName: users
+            columnName: last_name
+            columnDataType: varchar(255)
+        - dropNotNullConstraint:
+            tableName: users
+            columnName: phone_number
+            columnDataType: BIGINT

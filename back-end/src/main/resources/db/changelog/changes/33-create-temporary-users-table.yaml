@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-temporary_users-table
+      author: olekskov
+      changes:
+        - createTable:
+            tableName: "temporary_users"
+            columns:
+              - column:
+                  name: "id"
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "email"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "first_name"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "last_name"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "phone_number"
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "shopping_address"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "product_name"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "quantity"
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: "total"
+                  type: decimal
+                  constraints:
+                    nullable: true

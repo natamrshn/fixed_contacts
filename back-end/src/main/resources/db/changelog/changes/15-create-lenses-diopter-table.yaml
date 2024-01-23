@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-lenses-diopter-table
+      author: Ros
+      changes:
+        - createTable:
+            tableName: "lenses_diopter"
+            columns:
+              - column:
+                  name: "id"
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "min_diopter"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "max_diopter"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "step"
+                  type: varchar(255)
+                  constraints:
+                    nullable: true

@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-glasses-table
+      author: Ros
+      changes:
+        - createTable:
+            tableName: "glasses"
+            columns:
+              - column:
+                  name: "id"
+                  type: "bigint"
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: "color"
+                  type: "varchar(255)"
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "model"
+                  type: "varchar(255)"
+                  constraints:
+                    nullable: true
+              - column:
+                  name: "manufacturer"
+                  type: "varchar(255)"
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: "glasses"
+            baseColumnNames: "id"
+            constraintName: "FK_glasses_products"
+            referencedTableName: "products"
+            referencedColumnNames: "id"

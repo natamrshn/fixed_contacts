@@ -1,0 +1,18 @@
+.favorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid $favorite-icon-outline-color;
+  border-radius: 50%;
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

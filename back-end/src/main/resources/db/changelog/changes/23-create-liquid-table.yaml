@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-liquid-table
+      author: optic-okulist
+      changes:
+        - createTable:
+            tableName: liquids
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: volume
+                  type: INT
+                  constraints:
+                    nullable: false
+        - addForeignKeyConstraint:
+            baseTableName: liquids
+            baseColumnNames: id
+            referencedTableName: "products"
+            referencedColumnNames: id
+            constraintName: fk_liquid_product

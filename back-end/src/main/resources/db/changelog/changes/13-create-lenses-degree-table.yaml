@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+        id: create-lenses-degree-table
+        author: optic-okulist
+        changes:
+          - createTable:
+              tableName: "lenses_degree"
+              columns:
+                - column:
+                    name: "id"
+                    type: bigint
+                    autoIncrement: true
+                    constraints:
+                      primaryKey: true
+                      nullable: false
+                - column:
+                    name: "min_degree"
+                    type: varchar(255)
+                    constraints:
+                      nullable: true
+                - column:
+                    name: "max_degree"
+                    type: varchar(255)
+                    constraints:
+                      nullable: true
+                - column:
+                    name: "degree_step"
+                    type: varchar(255)
+                    constraints:
+                      nullable: true
